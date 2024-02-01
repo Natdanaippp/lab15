@@ -17,3 +17,18 @@ int main(){
 	
 	return 0;
 }
+void shuffle(int &a,int &b,int &c,int &d)
+{
+	int op[]={a,b,c,d};
+	for(int i=3;i>0;i--)
+	{
+		int j=rand()%(i+1);
+		int x=op[i];
+		op[i]=op[j];
+		op[j]=x;
+	}
+	a=op[0];
+	b=op[1];
+	c=op[2];
+	d=op[3];
+}
